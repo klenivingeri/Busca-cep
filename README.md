@@ -1,5 +1,6 @@
 
-Iniciando projeto
+
+1 ) Iniciando projeto
 `yarn init -y`
 `yarn add express nodemon cors axios`
 
@@ -8,8 +9,9 @@ Iniciando projeto
 `cors` auxilia controle das API's
 `axios` auxilia na chamada das API's 
 
+2 ) Subir o servidor e criar uma rota
 
-
+3 ) retornar um json
 
 
 
