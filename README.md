@@ -13,7 +13,9 @@
 
 3 ) retornar um json
 
+4 ) Criando Front-end
 
+5 ) subindo o front-end `yarn lite-server`
 
 
 
