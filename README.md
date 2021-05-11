@@ -17,9 +17,11 @@
 
 5 ) subindo o front-end `yarn lite-server`
 
+6 ) `Cors` configurado
 
+7 ) `nodemon` configurado 
 
-
+8 ) Tratando cep
 
 
 
