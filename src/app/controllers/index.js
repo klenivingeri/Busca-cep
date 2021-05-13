@@ -4,12 +4,23 @@ class CepController{
         
         try {
             const  { data } =  await axios(`https://viacep.com.br/ws/${req.params.cep}/json/`)
-            return res.json(data)
+            const endress ={
+                cep: data.cep,
+                logradouro: data.logradouro ,
+                bairro: data.bairro, 
+                localidade: data.localidade,
+                uf: data.uf,
+             }
+            return res.status(200).json(endress)
         } catch (error) {
             console.log(error)
+            return res.status(401).json({message: 'Failed to return Api data' })
         }
         
     }
+
 }
+
+
 
 module.exports = new CepController();

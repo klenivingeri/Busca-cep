@@ -32,7 +32,7 @@ form.addEventListener('submit', function(e) {
 });
 
 const rotaServer = (cep)=>{
-    return fetch(`http://localhost:4000/localiza/${cep}`)
+    return fetch(`http://localhost:4000/api/${cep}`)
 }
 
 const mostraCep = (data) =>{
