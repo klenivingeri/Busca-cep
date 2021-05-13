@@ -5,17 +5,20 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Busca - Cep</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='src/styles.css'>
     
 </head>
 <body >
-
-   <form id="formulario">
-        <input type="text" id="campo" max="9">
-        <input type="submit" value="Buscar">
-    </form>
-    <div id="retorno"></div>
-
-<script src="main.js"></script>
+    <div class="container">
+        <div class="form">
+            <form id="formulario" name="formulario">
+                <input id="campo" type="text" minlength="8" maxlength="8"  placeholder="Por favor informe um CEP"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 8  ">
+                <input type="submit"  value="Buscar">
+            </form>
+            <div id="retorno"></div>
+        </div>
+    </div>
+<script src="src/main.js"></script>
 </body>
 </html>
