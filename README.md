@@ -2,12 +2,17 @@
 
 1 ) Iniciando projeto
 `yarn init -y`
+
 `yarn add express nodemon cors axios`
 
 `express` da suporte na criação da API
+
 `nodemon` reinicia um servidor toda vez que o arquivo é alterado
+
 `cors` auxilia controle das API's
+
 `axios` auxilia na chamada das API's 
+
 
 2 ) Subir o servidor e criar uma rota
 
@@ -23,11 +28,11 @@
 
 8 ) Tratar cep 
 
-9 ) `yarn add jest -D` Criação de testes
+9 ) `yarn add jest -D` Para criar testes
 
 10 ) `yarn add supertest -D` para conseguir testar as rotas
 
-11 ) Criando testes
+11 ) Criar Testes
 
 
 
@@ -41,9 +46,9 @@
       X  · Dado um CEP inválido, deve retornar uma mensagem reportando o erro: "CEP inválido"O que se espera para as questões 1  - dicas e direcionamentos:
       X  · Os serviços devem receber e responder JSON;
       X · Faça o uso de Mocks principalmente nos testes;
-        · Os dados dos CEPs podem ser "Mocados";
-        · Pense em como documentar os cenários desenvolvidos (Testes sempre são uma boa forma de documentar);
-        · Ao finalizar o desenvolvimento você pode compartilhar o código pelo Github ou de outra maneira que preferir (como arquivo compactado). Se possível, em caso de arquivo compactado, envie o mesmo para um virtual drive e compartilha o link na prova;
+      X · Os dados dos CEPs podem ser "Mocados";
+      X  · Pense em como documentar os cenários desenvolvidos (Testes sempre são uma boa forma de documentar);
+      X · Ao finalizar o desenvolvimento você pode compartilhar o código pelo Github ou de outra maneira que preferir (como arquivo compactado). Se possível, em caso de arquivo compactado, envie o mesmo para um virtual drive e compartilha o link na prova;
         · Fique a vontade para entrar em contato e tirar dúvidas;
         · Juntamente com o Código, deve-se documentar a estratégia utilizada para a criação da aplicação, a arquitetura utilizada e os padrões. A documentação pode ser feita via GIT/Bitbucket ou adicionado no HackerRank. Isto faz parte da avaliação da prova.
         · Em caso de uso do Git/Bitbucket não esqueça de criar o .gitignore.

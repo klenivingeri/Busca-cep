@@ -11,6 +11,9 @@ class CepController{
                 localidade: data.localidade,
                 uf: data.uf,
              }
+            if(data.erro){
+                return res.status(401).json(data)
+            }
             return res.status(200).json(endress)
         } catch (error) {
             console.log(error)
@@ -18,9 +21,6 @@ class CepController{
         }
         
     }
-
 }
-
-
 
 module.exports = new CepController();

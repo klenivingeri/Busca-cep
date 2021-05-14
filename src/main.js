@@ -1,13 +1,14 @@
 var form = document.getElementById('formulario');
 var c = document.getElementById('campo');
 output = document.getElementById('retorno');
-var salvaCep = ''
-var count = 8
+
+var count = 7
+const img =`<img src="../public/assets/loading1.gif" height="100">`
 
 
 form.addEventListener('submit', function(e) {
     
-    output.innerHTML = `<img src="../public/assets/loading1.gif" height="100">`
+    output.innerHTML = img
     
 
     async function getCep(cep){
@@ -36,9 +37,9 @@ const rotaServer = (cep)=>{
 }
 
 const mostraCep = (data) =>{
-    count = 8
-    c.value = data.cep.replace('-','')
-    output.innerHTML = `
+    count = 7
+
+   return output.innerHTML = `
     CEP: ${data.cep}
     <br/>RUA: ${data.logradouro}
     <br/>BAIRRO: ${data.bairro}
@@ -47,14 +48,13 @@ const mostraCep = (data) =>{
 }
 
 const  novabusca = (cep) =>{
-        count--
-        c.value = '0'
+        
         var str = cep.split('');
         str[count] = 0
         c.value = str.join('')
-        salvaCep = c.value
-        
-        verificaCep(salvaCep)
+
+        count--
+        verificaCep(c.value)
 }
 
 async function verificaCep(cep){
@@ -63,9 +63,13 @@ async function verificaCep(cep){
         const data = await response.json()
         console.log(response)
         if(data.erro){
-            novabusca(cep)     
-            return output.innerHTML = 'CEP não localizado'      
+            if(cep == 00000000){             
+                return output.innerHTML = 'CEP não encontrado!';
+            }
+            return novabusca(cep)     
+               
         }
+
         mostraCep(data)
     }catch (error){             
         output.innerHTML = 'Ops, algo aconteceu, tente novamente mais tarde!'
