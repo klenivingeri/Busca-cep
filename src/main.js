@@ -6,6 +6,7 @@ var count = 7
 const img =`<img src="../public/assets/loading1.gif" height="100">`
 
 
+
 form.addEventListener('submit', function(e) {
     
     output.innerHTML = img
@@ -63,7 +64,7 @@ async function verificaCep(cep){
         const data = await response.json()
         console.log(response)
         if(data.erro){
-            if(cep == 00000000){             
+            if(cep == 0){             
                 return output.innerHTML = 'CEP não encontrado!';
             }
             return novabusca(cep)     

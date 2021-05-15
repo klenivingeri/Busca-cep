@@ -17,7 +17,7 @@ class CepController{
             return res.status(200).json(endress)
         } catch (error) {
             console.log(error)
-            return res.status(401).json({message: 'Failed to return Api data' })
+            return res.status(404).json({message: 'Failed to return Api data' })
         }
         
     }
